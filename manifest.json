@@ -1,0 +1,30 @@
+{
+  "name": "Obecność for ZenIT™",
+  "version": "1.1",
+  "description": "Pozwala obliczyć sumę obecności i procenty dla każdego przedmiotu",
+  "browser_action": {
+      "default_icon": "icons/48.png",
+      "default_title": "Obecność",
+      "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications",
+    "https://zenit.efendi.pl/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://zenit.efendi.pl/*/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png"
+  },
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "manifest_version": 2
+}

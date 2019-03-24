@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="/icons/48.png">
+    <title>Wyniki</title>
+    <style>
+      body {
+        background-color: #f9f9fa;
+      }
+      main {
+        margin: auto;
+        max-width: 920px;
+      }
+      header, .list-element {
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: 0px 3px 8px -3px #0009;
+        margin-bottom: 5px;
+      }
+      header {
+        padding: 25px;
+        border: 1px solid #e6e6e6;
+      }
+      .le_results {
+        display: grid;
+        grid-template-columns: max-content max-content auto;
+        grid-gap: 15px;
+        padding: 20px;
+        background-color: #ededf0;
+      }
+      .le_date {
+          padding-bottom: 10px;
+      }
+      .res_labels {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Poprzednie wyniki</h1>
+        <button type="button" id="btn_clear">Wyczyść dane</button>
+      </header>
+      <div id="data"></div>
+    </main>
+    <template id="tpl_list-element"><div class="list-element">
+        <div class="le_date"></div>
+        <div class="le_results"></div>
+    </div></template>
+    <template id="tpl_result">
+        <div class="res_name"></div>
+        <div class="res_labels">
+          Obecny: <br>
+          Nieobecny: <br>
+          Usprawiedliwiony: <br>
+          Spóźniony: <br>
+          Spóźniony, usprawiedliwiony: <br>
+          --- Razem: <br>
+          --- Puste: <br>
+          --- Jako zastępstwo: <br>
+        </div>
+        <div class="res_data"></div>
+    </template>
+    <script src="results.js" charset="utf-8"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<style>
+  main {
+    width: 150px;
+  }
+  #main-ui {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    margin-bottom: 10px;
+  }
+  #errbox {
+    background-color: #d70022;
+    color: white;
+    padding: 5px;
+    margin: 10px 0;
+  }
+  .hidden {
+    display: none;
+  }
+  .inputerr input {
+    border: 1px solid #d70022;
+  }
+</style>
+
+<main>
+  <div id="main-ui">
+    <label for="date_start">Od:</label>
+    <input type="date" id="date_start">
+    <label for="date_end">Do:</label>
+    <input type="date" id="date_end">
+    <button type="button" id="btn-role_calculate">Oblicz</button>
+    <button type="button" id="btn-role_results">Poprzednie wyniki</button>
+  </div>
+  <div id="errbox" class="hidden"></div>
+</main>
+
+<script src="js/popup.js" charset="utf-8"></script>
